@@ -1,4 +1,4 @@
-#Sun Mar 20 18:21:35 BRT 2022
+#Sun Mar 20 18:56:54 BRT 2022
 base.1=/Users/matheusbonfim/Documents/projetos/android-basics-kotlin-lunch-tray-app/app/build/intermediates/dex/debug/mergeProjectDexDebug/classes.dex
 path.1=classes.dex
 base.0=/Users/matheusbonfim/Documents/projetos/android-basics-kotlin-lunch-tray-app/app/build/intermediates/dex/debug/mergeExtDexDebug/classes.dex

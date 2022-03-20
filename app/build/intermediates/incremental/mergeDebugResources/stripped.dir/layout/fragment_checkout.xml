@@ -21,6 +21,15 @@
                                      
                                                
 
+    
+                 
+                            
+                                                                
+
+                 
+                                   
+                                                                     
+           
     <!-- TODO: Add the data binding variables of the type OrderViewModel and the CheckoutFragment -->
 
     <ScrollView
@@ -123,9 +132,9 @@
                 app:layout_constraintTop_toBottomOf="@id/tax"
                 tools:text="Total: $10.73"/>
 
-            <!-- TODO: submit the order when clicked -->
             <Button
                 android:id="@+id/submit_button"
+                android:tag="binding_1"                                  
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/side_margin"
@@ -134,9 +143,9 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/total"/>
 
-            <!-- TODO: cancel the order when clicked -->
             <Button
                 android:id="@+id/cancel_button"
+                android:tag="binding_2"                                  
                 style="?attr/materialButtonOutlinedStyle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"

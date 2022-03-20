@@ -25,7 +25,9 @@
             name="viewModel"
             type="com.example.lunchtray.model.OrderViewModel" />
 
-        <!-- TODO: Add the data binding variable for the EntreeMenuFragment -->
+        <variable
+            name="entreeMenuFragment"
+            type="com.example.lunchtray.ui.order.EntreeMenuFragment" />
     </data>
 
 
@@ -183,14 +185,15 @@
             <!-- TODO: cancel the order when clicked -->
             <Button
                 android:id="@+id/cancel_button"
+                android:onClick="@{() -> entreeMenuFragment.cancelOrder()}"
                 style="@style/Widget.Order.Button.Cancel"
                 app:layout_constraintEnd_toStartOf="@id/next_button"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="@id/next_button" />
 
-            <!-- TODO: go to the next screen when clicked -->
             <Button
                 android:id="@+id/next_button"
+                android:onClick="@{() -> entreeMenuFragment.goToNextScreen()}"
                 style="@style/Widget.Order.Button.Next"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"

@@ -60,7 +60,7 @@ class AccompanimentMenuFragment : Fragment() {
         binding.apply {
             lifecycleOwner = viewLifecycleOwner
             viewModel = sharedViewModel
-            // TODO: initialize the AccompanimentMenuFragment variables
+            accompanimentMenuFragment = this@AccompanimentMenuFragment
         }
     }
 
