@@ -48,35 +48,60 @@ class OrderViewModel : ViewModel() {
     val accompaniment: LiveData<MenuItem?> = _accompaniment
 
     // Subtotal for the order
-    private val _subtotal = MutableLiveData(0.0)
+    private val _subtotal = MutableLiveData<Double>()
     val subtotal: LiveData<String> = Transformations.map(_subtotal) {
         NumberFormat.getCurrencyInstance().format(it)
     }
 
     // Total cost of the order
-    private val _total = MutableLiveData(0.0)
+    private val _total = MutableLiveData<Double>()
     val total: LiveData<String> = Transformations.map(_total) {
         NumberFormat.getCurrencyInstance().format(it)
     }
 
     // Tax for the order
-    private val _tax = MutableLiveData(0.0)
+    private val _tax = MutableLiveData<Double>()
     val tax: LiveData<String> = Transformations.map(_tax) {
         NumberFormat.getCurrencyInstance().format(it)
+    }
+
+    init {
+        resetOrder()
+    }
+
+    /**
+     * Reset all values pertaining to the order.
+     */
+    fun resetOrder() {
+        // TODO: Reset all values associated with an order
+        _entree.value = null
+        _side.value = null
+        _accompaniment.value = null
+        _subtotal.value = 0.0
+        _total.value = 0.0
+        _tax.value = taxRate
     }
 
     /**
      * Set the entree for the order.
      */
-    fun setEntree(entree: String) {
+    fun setEntree(entreeName: String) {
         // TODO: if _entree.value is not null, set the previous entree price to the current
         //  entree price.
+        if(_entree.value != null) {
+            previousEntreePrice = entree.value!!.price
+        }
 
         // TODO: if _subtotal.value is not null subtract the previous entree price from the current
         //  subtotal value. This ensures that we only charge for the currently selected entree.
+        if(_subtotal.value != null) {
+            _subtotal.value = _subtotal.value!! - previousEntreePrice
+        }
 
         // TODO: set the current entree value to the menu item corresponding to the passed in string
         // TODO: update the subtotal to reflect the price of the selected entree.
+        _entree.value = menuItems[entreeName]
+        updateSubtotal(_entree.value!!.price)
     }
 
     /**
@@ -115,8 +140,14 @@ class OrderViewModel : ViewModel() {
         // TODO: if _subtotal.value is not null, update it to reflect the price of the recently
         //  added item.
         //  Otherwise, set _subtotal.value to equal the price of the item.
+        if(_subtotal.value != null) {
+            _subtotal.value = _subtotal.value!! + itemPrice
+        } else {
+            _subtotal.value = itemPrice
+        }
 
         // TODO: calculate the tax and resulting total
+        calculateTaxAndTotal()
     }
 
     /**
@@ -124,13 +155,8 @@ class OrderViewModel : ViewModel() {
      */
     fun calculateTaxAndTotal() {
         // TODO: set _tax.value based on the subtotal and the tax rate.
+        _tax.value = _subtotal.value!! * _tax.value!!
         // TODO: set the total based on the subtotal and _tax.value.
-    }
-
-    /**
-     * Reset all values pertaining to the order.
-     */
-    fun resetOrder() {
-        // TODO: Reset all values associated with an order
+        _total.value = _subtotal.value!! + _tax.value!!
     }
 }
