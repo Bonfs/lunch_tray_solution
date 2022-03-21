@@ -48,7 +48,6 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"/>
 
-            <!-- TODO: display the entree name based on the entree selection -->
             <TextView
                 android:id="@+id/entree_selection"
                 android:tag="binding_1"                
@@ -57,7 +56,6 @@
                 app:layout_constraintTop_toBottomOf="@id/order_summary"
                 tools:text="Cauliflower" />
 
-            <!-- TODO: display the entree price based on the entree selection -->
             <TextView
                 android:id="@+id/entree_price"
                 android:tag="binding_2"                
@@ -66,7 +64,6 @@
                 app:layout_constraintTop_toTopOf="@id/entree_selection"
                 tools:text="$7.00"/>
 
-            <!-- TODO: display the side name based on the side selection -->
             <TextView
                 android:id="@+id/side_selection"
                 android:tag="binding_3"              
@@ -75,7 +72,6 @@
                 app:layout_constraintTop_toBottomOf="@id/entree_selection"
                 tools:text="Spicy Potatoes" />
 
-            <!-- TODO: display the side price based on the side selection -->
             <TextView
                 android:id="@+id/side_price"
                 android:tag="binding_4"              
@@ -84,7 +80,6 @@
                 app:layout_constraintTop_toTopOf="@id/side_selection"
                 tools:text="$2.00"/>
 
-            <!-- TODO: display the accompaniment name based on the accompaniment selection -->
             <TextView
                 android:id="@+id/accompaniment_selection"
                 android:tag="binding_5"                       
@@ -93,7 +88,6 @@
                 app:layout_constraintTop_toBottomOf="@id/side_selection"
                 tools:text="Mixed Berries" />
 
-            <!-- TODO: display the accompaniment price based on the accompaniment selection -->
             <TextView
                 android:id="@+id/accompaniment_price"
                 android:tag="binding_6"                       
@@ -110,7 +104,6 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/accompaniment_selection" />
 
-            <!-- TODO: set the text to the current subtotal value from the view model -->
             <TextView
                 android:id="@+id/subtotal"
                 android:tag="binding_7"                               
@@ -119,7 +112,6 @@
                 app:layout_constraintTop_toBottomOf="@id/divider"
                 tools:text="Subtotal: $10.00"/>
 
-            <!-- TODO: set the text to the current tax value from the view model -->
             <TextView
                 android:id="@+id/tax"
                 android:tag="binding_8"                     
@@ -129,7 +121,6 @@
                 app:layout_constraintTop_toBottomOf="@id/subtotal"
                 tools:text="Tax: $0.73"/>
 
-            <!-- TODO: set the text to the current total value from the view model -->
             <TextView
                 android:id="@+id/total"
                 android:tag="binding_9"                         
