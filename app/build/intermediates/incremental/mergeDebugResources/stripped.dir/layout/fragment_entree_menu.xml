@@ -50,7 +50,6 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent">
 
-                <!-- TODO: set the entree in the view model when the RadioButton is clicked -->
                 <RadioButton
                     android:id="@+id/cauliflower"
                     android:tag="binding_1"                                      
@@ -82,7 +81,6 @@
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@id/cauliflower_description" />
 
-                <!-- TODO: set the entree in the view model when the RadioButton is clicked -->
                 <RadioButton
                     android:id="@+id/chili"
                     android:tag="binding_4"                                
@@ -114,7 +112,6 @@
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@id/chili_description" />
 
-                <!-- TODO: set the entree in the view model when the RadioButton is clicked -->
                 <RadioButton
                     android:id="@+id/pasta"
                     android:tag="binding_7"                                
@@ -146,7 +143,6 @@
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@id/pasta_description" />
 
-                <!-- TODO: set the entree in the view model when the RadioButton is clicked -->
                 <RadioButton
                     android:id="@+id/skillet"
                     android:tag="binding_10"                                 
@@ -182,8 +178,6 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/entree_options" />
 
-            <!-- TODO: set the text to the current subtotal value from the view model -->
-<!--            android:text="@{@string/subtotal_price(viewModel.subtotal)}"-->
             <TextView
                 android:id="@+id/subtotal"
                 android:tag="binding_13"                              
@@ -192,7 +186,6 @@
                 app:layout_constraintTop_toBottomOf="@id/divider"
                 tools:text="Subtotal $5.00"/>
 
-            <!-- TODO: cancel the order when clicked -->
             <Button
                 android:id="@+id/cancel_button"
                 android:tag="binding_14"                                   
