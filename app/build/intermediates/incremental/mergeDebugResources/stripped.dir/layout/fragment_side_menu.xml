@@ -50,7 +50,6 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent">
 
-                <!-- TODO: set the side in the view model when the RadioButton is clicked -->
                 <RadioButton
                     android:id="@+id/salad"
                     android:tag="binding_1"                              
@@ -82,7 +81,6 @@
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@id/salad_description" />
 
-                <!-- TODO: set the side in the view model when the RadioButton is clicked -->
                 <RadioButton
                     android:id="@+id/soup"
                     android:tag="binding_4"                             
@@ -115,7 +113,6 @@
                     app:layout_constraintTop_toBottomOf="@id/soup_description" />
 
 
-                <!-- TODO: set the side in the view model when the RadioButton is clicked -->
                 <RadioButton
                     android:id="@+id/potatoes"
                     android:tag="binding_7"                                 
@@ -147,7 +144,6 @@
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@id/potato_description" />
 
-                <!-- TODO: set the side in the view model when the RadioButton is clicked -->
                 <RadioButton
                     android:id="@+id/rice"
                     android:tag="binding_10"                            
@@ -183,7 +179,6 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/side_options" />
 
-            <!-- TODO: set the text to the current subtotal value from the view model -->
             <TextView
                 android:id="@+id/subtotal"
                 android:tag="binding_13"                              
